@@ -203,7 +203,7 @@ func (c *Connection) Uptime() (uptime int64, err error) {
 	return uptime, nil
 }
 
-// Check if version v2 is equal or higher than v1 (v2 >= v1)
+// AtLeastVersion checks if version v2 is equal or higher than v1 (v2 >= v1)
 // v2 can be in form m.n.o-ubuntu
 func (c *Connection) AtLeastVersion(minVersion string) (bool, error) {
 	version, err := c.GetGlobalVarString("version")

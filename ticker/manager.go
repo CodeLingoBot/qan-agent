@@ -112,7 +112,7 @@ func (clock *Clock) ETA(c chan time.Time) float64 {
 	return ticker.ETA(clock.nowFunc())
 }
 
-// Return time when interval began for current time.
+// Began returns time when interval began for current time.
 func Began(interval uint, now uint) time.Time {
 	i := float64(interval)
 	t := float64(now)
